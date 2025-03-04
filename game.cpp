@@ -14,7 +14,7 @@ constexpr auto health_bar_width = 70;
 constexpr auto max_frames = 2000;
 
 //Global performance timer
-constexpr auto REF_PERFORMANCE = 114757; //UPDATE THIS WITH YOUR REFERENCE PERFORMANCE (see console after 2k frames)
+constexpr auto REF_PERFORMANCE = 70300.9; //UPDATE THIS WITH YOUR REFERENCE PERFORMANCE (see console after 2k frames)
 static timer perf_timer;
 static float duration;
 
@@ -124,7 +124,7 @@ bool Tmpl8::Game::left_of_line(vec2 line_start, vec2 line_end, vec2 point)
 // Collision detection
 // Targeting etc..
 // -----------------------------------------------------------
-void Game::update(float deltaTime)
+void Game::update(float deltaTime) // Big O: 
 {
     //Calculate the route to the destination for each tank using BFS
     //Initializing routes here so it gets counted for performance..
